@@ -1,0 +1,6 @@
+{
+  "domain": "Put your own Auth0 tenant domain here",
+  "clientId": "Put your own My SPA app client ID here",
+  "audience": "api://my-auth0-workshop-api",
+  "scope": "openid email profile read:messages read:contacts"
+}
