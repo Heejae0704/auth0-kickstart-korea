@@ -1,0 +1,6 @@
+{
+  "login": {
+    "title": "${clientName}",
+    "description": "다시 만나서 반갑습니다!"
+  }
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="{{locale}}">
+  <head>
+    {%- auth0:head -%}
+    <style>
+      body {
+        background-image: url('https://heejae.s3.ap-northeast-1.amazonaws.com/tarot_full_background.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+      .prompt-wrapper {
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: 600px;
+        height: 100%;
+        justify-content: center;
+        background-color: #ffffff;
+      }
+    </style>
+    <title>{{ prompt.screen.texts.pageTitle }}</title>
+  </head>
+  <body class="_widget-auto-layout">
+    {% if prompt.name == "login" or prompt.name == "signup" %}
+    <div class="prompt-wrapper">{%- auth0:widget -%}</div>
+    {% else %} {%- auth0:widget -%} {% endif %}
+  </body>
+</html>
