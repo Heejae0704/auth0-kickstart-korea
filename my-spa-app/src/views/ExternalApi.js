@@ -51,11 +51,17 @@ export const ExternalApiComponent = () => {
     await callApi();
   };
 
-  const callApi = async () => {
+  const callApi = async (endpoint) => {
+    setState({
+      ...state,
+      showResult: false,
+      apiMessage: '',
+    });
+
     try {
       const token = await getAccessTokenSilently();
 
-      const response = await fetch(`${apiOrigin}/api/private`, {
+      const response = await fetch(`${apiOrigin}/api/${endpoint}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -81,6 +87,13 @@ export const ExternalApiComponent = () => {
     fn();
   };
 
+  const clearResponse = () => {
+    setState({
+      ...state,
+      showResult: false,
+    });
+  };
+
   return (
     <>
       <div className="mb-5">
@@ -96,7 +109,6 @@ export const ExternalApiComponent = () => {
             </a>
           </Alert>
         )}
-
         {state.error === 'login_required' && (
           <Alert color="warning">
             You need to{' '}
@@ -109,19 +121,16 @@ export const ExternalApiComponent = () => {
             </a>
           </Alert>
         )}
-
         <h1>External API</h1>
         <p className="lead">
           Ping an external API by clicking the button below.
         </p>
-
         <p>
           This will call a local API on port 3010 that we will implement during
           API server setup. An access token is sent as part of the request's
           `Authorization` header and the API will validate it using the API's
           audience value.
         </p>
-
         {!audience && (
           <Alert color="warning">
             <p>
@@ -167,14 +176,39 @@ export const ExternalApiComponent = () => {
             </p>
           </Alert>
         )}
-
         <Button
           color="primary"
           className="mt-5"
-          onClick={callApi}
+          onClick={() => callApi('private')}
           disabled={!audience}
         >
-          Ping API
+          Ping Private API
+        </Button>{' '}
+        <Button
+          color="success"
+          className="mt-5"
+          onClick={() => callApi('messages')}
+          disabled={!audience}
+        >
+          Ping Message Scoped API
+        </Button>
+        {'  '}
+        <Button
+          color="success"
+          className="mt-5"
+          onClick={() => callApi('contacts')}
+          disabled={!audience}
+        >
+          Ping Contact Scoped API
+        </Button>
+        {'  '}
+        <Button
+          color="secondary"
+          className="mt-5"
+          onClick={clearResponse}
+          disabled={!audience}
+        >
+          Clear API Response
         </Button>
       </div>
 

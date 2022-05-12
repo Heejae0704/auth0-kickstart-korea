@@ -32,13 +32,25 @@ app.get('/api/private', checkJwt, function (req, res) {
 });
 
 app.get(
-  '/api/private-scoped',
+  '/api/messages',
   checkJwt,
   requiredScopes('read:messages'),
   function (req, res) {
     res.json({
       message:
         'Hello from a private endpoint! You need to be authenticated and have a scope of read:messages to see this.',
+    });
+  }
+);
+
+app.get(
+  '/api/contacts',
+  checkJwt,
+  requiredScopes('read:contacts'),
+  function (req, res) {
+    res.json({
+      message:
+        'Heejae Chang - heejae.chang@okta.com. You need to have a scope of read:contacts to see this',
     });
   }
 );
