@@ -59,7 +59,11 @@ export const ExternalApiComponent = () => {
     });
 
     try {
-      const token = await getAccessTokenSilently();
+      if (endpoint === 'contacts') {
+        token = await getAccessTokenWithPopup({ scope: 'read:contacts' });
+      } else {
+        token = await getAccessTokenSilently();
+      }
 
       const response = await fetch(`${apiOrigin}/api/${endpoint}`, {
         headers: {
