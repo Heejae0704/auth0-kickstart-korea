@@ -4,7 +4,7 @@ function(user, context, callback) {
   // run only for the specified clients
   if (CLIENTS_WITH_MFA.indexOf(context.clientID) !== -1) {
     // ask for MFA only if scope transfer:funds was requested
-    if (context.request.query.scope.indexOf('read:contacts') > -1) {
+    if (context.request.query.scope && context.request.query.scope.indexOf('read:contacts') > -1) {
       context.multifactor = {
         provider: 'any',
         allowRememberBrowser: false
