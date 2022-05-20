@@ -59,6 +59,7 @@ export const ExternalApiComponent = () => {
     });
 
     try {
+      let token;
       if (endpoint === 'contacts') {
         token = await getAccessTokenWithPopup({ scope: 'read:contacts' });
       } else {
