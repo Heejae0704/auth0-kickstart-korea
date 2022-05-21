@@ -4,7 +4,12 @@ This sample app is a combination of different Auth0 sample apps slightly revised
 
 ## How to use the repository
 
-Auth0 Kickstart Workshop instruction can be found [here](https://drive.google.com/file/d/1CK9p397NxfZKDAlUBOvs0rOJ6swdha1d/view?usp=sharing). The sample app is designed to show you how fast and easy it is to add Auth to your apps when you use Auth0.
+Auth0 Kickstart Workshop instruction can be found at
+
+- [Click here for Korean instruction](https://drive.google.com/file/d/1CK9p397NxfZKDAlUBOvs0rOJ6swdha1d/view?usp=sharing)
+- [Click here for English instruction](http://localhost:3000)
+
+The sample app is designed to show you how fast and easy it is to add Auth to your apps when you use Auth0.
 
 ## What is Auth0?
 
