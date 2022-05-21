@@ -1,12 +1,14 @@
 # auth0-kickoff-korea
 
-This sample app is a combination of different Auth0 sample apps slightly revised to be used for Auth0 Kickstart Workshop.
+This sample app is a combination of a few of Auth0 sample apps that are slightly revised to be used for Auth0 Kickstart Workshop.
+
+이 샘플 앱은 Auth0 킥스타트 워크샵을 위해 몇 가지 Auth0 샘플 앱들을 약간 수정하여 모아놓은 것입니다.
 
 ## How to use the repository
 
 Auth0 Kickstart Workshop instruction can be found at
 
-- [Click here for Korean instruction](https://drive.google.com/file/d/1CK9p397NxfZKDAlUBOvs0rOJ6swdha1d/view?usp=sharing)
+- [한국어 슬라이드를 보시려면 클릭](https://drive.google.com/file/d/1CK9p397NxfZKDAlUBOvs0rOJ6swdha1d/view?usp=sharing)
 - [Click here for English instruction](http://localhost:3000)
 
 The sample app is designed to show you how fast and easy it is to add Auth to your apps when you use Auth0.
