@@ -1,4 +1,4 @@
-# auth0-kickoff-korea
+# auth0-kickstart-korea
 
 This sample app is a combination of a few of Auth0 sample apps that are slightly revised to be used for Auth0 Kickstart Workshop.
 
