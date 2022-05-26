@@ -9,7 +9,7 @@ This sample app is a combination of a few of Auth0 sample apps that are slightly
 Auth0 Kickstart Workshop instruction can be found at
 
 - [한국어 슬라이드를 보시려면 클릭](https://drive.google.com/file/d/1VmZgRedrXeLaNkyu-Ly9BXR0SSBiZtOh/view?usp=sharing)
-- [Click here for English instruction](http://localhost:3000)
+- [Click here for English instruction (TBD)]
 
 The sample app is designed to show you how fast and easy it is to add Auth to your apps when you use Auth0.
 
